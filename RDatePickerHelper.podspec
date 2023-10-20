@@ -32,10 +32,11 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Classes/**/*'
   
+  s.swift_version = '4.0'
+  
   s.platforms = {
       "ios": "13.0"
   }
-  
   # s.resource_bundles = {
   #   'RDatePickerHelper' => ['RDatePickerHelper/Assets/*.png']
   # }
