@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'RDatePickerHelper_Example' do
+  pod 'RDatePickerHelper', :path => '../'
+
+  target 'RDatePickerHelper_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
