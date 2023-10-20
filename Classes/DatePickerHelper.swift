@@ -13,6 +13,8 @@ public class DatePickerHelper {
     
     public static let shared = DatePickerHelper()
     
+    public var doneClicked: ((Date) -> Void)?
+    public var cancelClicked: (() -> Void)?
     var datePicker : UIDatePicker!
     var textFiled : UITextField?
         
@@ -69,11 +71,13 @@ public class DatePickerHelper {
     
     // toolbar Done button press
     @objc func doneClick(btn: UIBarButtonItem) {
+        doneClicked?(self.datePicker.date)
         self.textFiled?.resignFirstResponder()
     }
     
     // toolbar Cancel button press
     @objc func cancelClick(btn: UIBarButtonItem) {
+        cancelClicked?()
         self.textFiled?.resignFirstResponder()
     }
 }
